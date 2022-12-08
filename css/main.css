@@ -1,0 +1,127 @@
+:root {
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 8%);
+}
+
+body {
+  font-family: muli, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+/* SECTION HEADER */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--box-shadow);
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  text-transform: lowercase;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__item {
+  margin-left: 20px;
+}
+
+.menu__item a {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+/* SECTION CONTADOR */
+
+.container_contador {
+  display: flex;
+  width: 80%;
+  height: 500px;
+  margin: 10vh auto;
+}
+
+.contador {
+  width: 100%;
+  height: calc(100%- 70px);
+  display: grid;
+  grid-template-areas: "headCont headCont headCont headCont headCont" ". bodyCont bodyCont bodyCont ." "footerCont footerCont footerCont footerCont footerCont";
+  grid-template-columns: 30px 20% 1fr 20% 30px;
+  grid-template-rows: 10% 1fr 10%;
+  column-gap: 5px;
+  border: 2px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.contador__head {
+  grid-area: headCont;
+  background-color: rgb(255, 255, 255);
+  box-shadow: var(--box-shadow);
+}
+
+.contador__body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: bodyCont;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  overflow: hidden;
+  z-index: -1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 9%);
+  border-radius: 0 0 20px 20px;
+}
+.contador__footer {
+  grid-area: footerCont;
+  background-color: rgb(255, 255, 255);
+  z-index: -2;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.contador__body-content {
+  border: 1px solid black;
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.contador__body-buttom button {
+  border: none;
+  width: 100px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: royalblue;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+
+.contador__body-buttom button:hover {
+  background-color: rgb(60, 57, 219);
+  transition: 0.5s;
+}
