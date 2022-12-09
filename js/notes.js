@@ -2,7 +2,7 @@ const input__notes = document.querySelector("#note_input");
 const btn__notes = document.querySelector(".btn__notes");
 let newNote = document.createTextNode(input__notes);
 let notes__history = document.querySelector(".notes__history");
-const randomData = Math.random() * 100;
+const randomData = Math.floor(Math.random() * 1000);
 let arr = [];
 
 window.onload = loadNotes();
@@ -15,10 +15,12 @@ function loadNotes() {
 
   for (let i = 0; i < arr.length; i++) {
     notes__history.innerHTML += `
-            <div class="note" data-key="${randomData}">
+            <div class="note" data-key="${randomData}" id="note_div">
                 <span id="notename">
                     ${arr[i]}
                 </span>
+                <button class="remove">Delete</button>
+
             </div>
         `;
   }
@@ -29,10 +31,11 @@ function addNotes() {
     alert("Por favor insira uma anotação...");
   } else {
     notes__history.innerHTML += `
-            <div class="note" data-key="${randomData}">
+            <div class="note" data-key="${randomData}" id="note_div">
                 <span id="notename">
                     ${input__notes.value}
                 </span>
+                <button class="remove">Delete</button>
             </div>
         `;
     let newNotes = input__notes.value;
