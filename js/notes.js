@@ -12,9 +12,7 @@ function loadNotes() {
     arr = JSON.parse(localStorage.getItem("meuArr"));
   }
   let arrValue = arr.length;
-  arr.forEach((arr) => {
-    console.log(arr);
-  });
+
   for (let i = 0; i < arr.length; i++) {
     notes__history.innerHTML += `
             <div class="note" data-key="${randomData}">
@@ -46,5 +44,4 @@ function addNotes() {
 
 btn__notes.addEventListener("click", () => {
   addNotes();
-  console.log(arr);
 });
