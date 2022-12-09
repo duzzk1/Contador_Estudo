@@ -21,7 +21,7 @@ header {
   box-shadow: var(--box-shadow);
   position: fixed;
   z-index: 999;
-  opacity: 50%;
+  opacity: 99%;
 }
 
 header img {
