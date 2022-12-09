@@ -11,39 +11,62 @@
   </head>
   <body>
     <header>
-      <img src="img/logo.png" alt="Logo do site" />
+      <a href="#container__contador_page"
+        ><img src="img/logo.png" alt="Logo do site"
+      /></a>
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item">
             <a href="#">Inicio</a>
           </li>
           <li class="menu__item">
-            <a href="#">Contador</a>
+            <a href="#container__contador_page">Contador</a>
           </li>
           <li class="menu__item">
-            <a href="#">Anotações</a>
+            <a href="#container__notes_page">Anotações</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="container_contador">
-        <div class="contador">
-          <div class="contador__head">
-            <h1>Contador de estudo</h1>
-          </div>
-          <div class="contador__body">
-            <div class="contador__body-content"><h2>0</h2></div>
-            <div class="contador__body-buttom">
-              <button class="btn__contador">Adicionar</button>
-              <button class="btn__contador-reset">Resetar</button>
+      <section id="container__inicio_page"></section>
+      <section id="container__contador_page">
+        <div id="container_contador">
+          <div class="contador">
+            <div class="contador__head">
+              <h1>Contador de estudo</h1>
             </div>
+            <div class="contador__body">
+              <div class="contador__body-content"><h2>0</h2></div>
+              <div class="contador__body-buttom">
+                <button class="btn__contador">Adicionar</button>
+                <button class="btn__contador-reset">Resetar</button>
+              </div>
+            </div>
+            <div class="contador__footer">created by Duzzk</div>
           </div>
-
-          <div class="contador__footer">created by Duzzk</div>
         </div>
-      </div>
+      </section>
+      <section id="container__note_page">
+        <div id="container_notes">
+          <div class="notes">
+            <div class="notes__head">
+              <h1>Faça sua Anotação</h1>
+            </div>
+            <div class="notes__body">
+              <div class="notes__body-content">
+                <input type="text" name="note" id="note_input" />
+              </div>
+              <div class="notes__body-buttom">
+                <button class="btn__notes">Adicionar</button>
+              </div>
+            </div>
+            <div class="notes__history"></div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="js/main.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/notes.js"></script>
   </body>
 </html>
